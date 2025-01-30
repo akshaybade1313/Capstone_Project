@@ -37,10 +37,10 @@ pipeline{
 			steps{
 			script{
 				if(isUnix()){
-					sh "docker buildx build . --platform linux/arm64 --tag kpradeep/my-app:latest --push"
+					sh "docker buildx build . --platform linux/arm64 --tag akshaybade13/my-app:latest --push"
 				}
 				else{
-					bat "docker buildx build . --platform linux/arm64 --tag kpradeep/my-app:latest --push"
+					bat "docker buildx build . --platform linux/arm64 --tag akshaybade13/my-app:latest --push"
 				}
 			}
 			}
