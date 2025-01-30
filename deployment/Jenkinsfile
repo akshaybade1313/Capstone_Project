@@ -13,22 +13,10 @@ pipeline{
 			
 			script{
 				if(isUnix()){
-					sh "mvn clean package"
+					sh "mvn clean install"
 				}
 				else{
-					bat "mvn clean package"
-				}
-			}
-			}
-		}
-		stage('Integration Test'){
-			steps{
-			script{
-				if(isUnix()){
-					sh "mvn clean verify"
-				}
-				else{
-					bat "mvn clean verify"
+					bat "mvn clean install"
 				}
 			}
 			}
